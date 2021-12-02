@@ -29,8 +29,10 @@ Its just a coffee bot
 """)
 sleep(0.5)
 name = input("what is your name?\n")
-os.system("clear") #Linux
-os.system("cls") #Windows
+if os.name == 'nt':
+os.system('cls')
+else:
+os.system('clear')
 sleep(0.7)
 print("Hello "+ name[0].upper() +""+ name[1:] +"!\n\n\n")
 print("what would you like from our menu today? Here is what we are serving.\n", end="\r")
