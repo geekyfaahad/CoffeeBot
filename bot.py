@@ -56,4 +56,4 @@ payload = {"TIME" : str(now),"Name" : name,"MENU" : menu,"QUANTITY" : order,"TOT
 json_object = json.dumps(payload, indent = 6)
 with open('data.json', 'a' ) as outfile:
     outfile.write(""+json_object+"\n")
-#r = requests.post('Enter_Your_Api_Link_Here', json=payload)
+r = requests.post('Enter_Your_Api_Link_Here', json=payload)
