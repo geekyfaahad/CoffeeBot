@@ -8,7 +8,7 @@ import pyfiglet
 
 
 #############  Functions   ################
-result = pyfiglet.figlet_format("C o f f e e H u B", font = "5lineoblique" )
+result = pyfiglet.figlet_format("C o f f e e  H u B", font = "big" )
 nointernet = pyfiglet.figlet_format("No Internet", font = "banner" )
 hook = Webhook('https://discord.com/api/webhooks/917066155548618852/WeTxA_SHcUr2VOZhUjefQUzx7LyVzwT14nhi5Xga5Pk-lmsrUPA2-44rqvomO2mneH8a')
 today = date.today()
@@ -38,6 +38,7 @@ else:
 
    
 print(now)
+print(result)
 print("""
                        .
                         `:.
