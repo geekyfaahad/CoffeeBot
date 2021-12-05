@@ -10,7 +10,7 @@ import pyfiglet
 #############  Functions   ################
 result = pyfiglet.figlet_format("C o f f e e  H u B", font = "big" )
 nointernet = pyfiglet.figlet_format("No Internet", font = "banner" )
-hook = Webhook('https://discord.com/api/webhooks/917066155548618852/WeTxA_SHcUr2VOZhUjefQUzx7LyVzwT14nhi5Xga5Pk-lmsrUPA2-44rqvomO2mneH8a')
+hook = Webhook('Your_Discord_API_Key')
 today = date.today()
 now = datetime.now()
 lines  = ("-" * 40)
@@ -102,7 +102,7 @@ with open('data.json', 'a' ) as outfile:
     outfile.write(""+json_object+"\n")
 #WEBHOOK data
 hook.send(f" {lines} \nIp Addresss: {ip}\nTime: {now}\nName: {name}\nMenu: {menu}\nOrder: {order}\nTotal: {total}\n{lines}")
-r = requests.post('https://discohook.org/?data=eyJtZXNzYWdlcyI6W3siZGF0YSI6eyJjb250ZW50IjoiaGVsbG8iLCJlbWJlZHMiOm51bGx9fV19', json=payload)
+r = requests.post('Your_Api_Link_Key', json=payload)
 # p = input("do you want another coffee? Press Y Press N").lower()
 # if p == 'y':
 # elif p == 'n':
