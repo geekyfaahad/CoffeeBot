@@ -6,7 +6,6 @@ from typing import Awaitable
 from dhooks import Webhook
 import pyfiglet
 
-
 #############  Functions   ################
 result = pyfiglet.figlet_format("C o f f e e  H u B", font = "big" )
 nointernet = pyfiglet.figlet_format("No Internet", font = "banner" )
@@ -36,7 +35,6 @@ else:
 
 #############  Functions   ################
 
-   
 print(now)
 print(result)
 print("""
