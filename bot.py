@@ -10,6 +10,7 @@ import pyfiglet
 result = pyfiglet.figlet_format("C o f f e e  H u B", font = "big" )
 nointernet = pyfiglet.figlet_format("No Internet", font = "banner" )
 hook = Webhook('Your_Discord_API_Key')
+base_url = "Your_Telegram_API_Key"
 today = date.today()
 now = datetime.now()
 lines  = ("-" * 40)
@@ -94,14 +95,23 @@ if print=="not a valid menu option":
 # sleep(2)
 total=int(order) * 50
 print("Your Total is Rs " +str(total)) 
-payload = {"TIME" : str(now),"Name" : name,"MENU" : menu,"QUANTITY" : order,"TOTAL" : total,}
-json_object = json.dumps(payload, indent = 6)
-with open('data.json', 'a' ) as outfile:
-    outfile.write(""+json_object+"\n")
+# payload = {"TIME" : str(now),"Name" : name,"MENU" : menu,"QUANTITY" : order,"TOTAL" : total,}
+# json_object = json.dumps(payload, indent = 6)
+# with open('data.json', 'a' ) as outfile:
+#     outfile.write(""+json_object+"\n")
+# r = requests.post('Your_Api_Link_Key', json=payload)
+
 #WEBHOOK data
-hook.send(f" {lines} \nIp Addresss: {ip}\nTime: {now}\nName: {name}\nMenu: {menu}\nOrder: {order}\nTotal: {total}\n{lines}")
-r = requests.post('Your_Api_Link_Key', json=payload)
+hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name}\nMenu: {menu}\nOrder: {order}\nTotal: {total}\n{lines}")
 # p = input("do you want another coffee? Press Y Press N").lower()
+
+#telegram data
+parameters = {
+    "chat_id" : "-1001509648997",
+    "text" : ("Time: "+str(now)+"\nIp Addresss: "+ip+"\nName: "+name+"\nMENU: "+menu+"\nQuantity: "+order+"\nTotal: "+str(total)+"")
+} 
+r = requests.get(base_url, data = parameters)
+print(r.text)
 # if p == 'y':
 # elif p == 'n':
 # exit()
