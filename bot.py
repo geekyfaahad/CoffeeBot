@@ -107,7 +107,7 @@ hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name}\nMenu: {menu
 
 #telegram data
 parameters = {
-    "chat_id" : "-1001509648997",
+    "chat_id" : "Enter_chat_Bot_id",
     "text" : ("Time: "+str(now)+"\nIp Addresss: "+ip+"\nName: "+name+"\nMENU: "+menu+"\nQuantity: "+order+"\nTotal: "+str(total)+"")
 } 
 r = requests.get(base_url, data = parameters)
