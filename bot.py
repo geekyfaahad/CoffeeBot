@@ -102,7 +102,7 @@ while True:
         # r = requests.post('Your_Api_Link_Key', json=payload)
 
         #WEBHOOK data
-        hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name.upper()}\nMenu: {menu.upper()}\nOrder: {order}\nTotal: {total}\n{lines}")
+        #hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name.upper()}\nMenu: {menu.upper()}\nOrder: {order}\nTotal: {total}\n{lines}")
         # p = input("do you want another coffee? Press Y Press N").lower()
 
         #telegram data
