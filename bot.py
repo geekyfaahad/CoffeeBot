@@ -1,16 +1,15 @@
 from datetime import datetime
 from datetime import date
 from time import sleep
-import os,requests,json,socket,sys
+import os,requests,json,socket,sys,pyfiglet
 from typing import Awaitable
 from dhooks import Webhook
-import pyfiglet
 
 #############  Functions   ################
 result = pyfiglet.figlet_format("C o f f e e  H u B", font = "big" )
 nointernet = pyfiglet.figlet_format("No Internet", font = "banner" )
-hook = Webhook('Enter_Discord_Api_Key')
-base_url = "Enter_Telegram_Api_KEY"
+#hook = Webhook('Enter_Discord_Api_Key')
+#base_url = "Enter_Telegram_Api_KEY"
 today = date.today()
 now = datetime.now()
 lines  = ("-" * 40)
@@ -72,16 +71,7 @@ while True:
         print("Hello "+ name[0].upper() +""+ name[1:] +"!\n\n\n")
         print("What would you like from our menu today? \nHere is what we are serving.\n", end="\r")
         menu = input("Black Coffee , Expresso , Cappacuino , Cold Brew\n")
-        clear()
-        print("You choose "+ menu.upper() +" Great Choice 👍\n")
-        order = input("How many cups of "+ menu.upper() +"\n")
-        clear()
-        print("Your order "+ menu.upper() +"\n"+ order.upper() +" cups\n")
-        # sleep(1)
-        # print("Please wait\n")
-        # sleep(1.5)
-        # print("Please wait while we are making up your total\n\n")
-        if menu.upper().endswith('BLACK COFFEE'):
+	if menu.upper().endswith('BLACK COFFEE'):
                         price=50
         elif menu.upper().endswith('EXPRESSO'):
                         price=80
@@ -94,6 +84,15 @@ while True:
           exit()
         if print=="not a valid menu option":
           exit()
+        clear()
+        print("You choose "+ menu.upper() +" Great Choice 👍\n")
+        order = input("How many cups of "+ menu.upper() +"\n")
+        clear()
+        print("Your order "+ menu.upper() +"\n"+ order.upper() +" cups\n")
+        # sleep(1)
+        # print("Please wait\n")
+        # sleep(1.5)
+        # print("Please wait while we are making up your total\n\n")
         # sleep(2)
         total=int(order) * 50
         print("Your Total is Rs " +str(total)) 
@@ -104,15 +103,15 @@ while True:
         # r = requests.post('Your_Api_Link_Key', json=payload)
 
         #WEBHOOK data
-        hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name.upper()}\nMenu: {menu.upper()}\nOrder: {order}\nTotal: {total}\n{lines}")
+        #hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name.upper()}\nMenu: {menu.upper()}\nOrder: {order}\nTotal: {total}\n{lines}")
         # p = input("do you want another coffee? Press Y Press N").lower()
 
         #telegram data
-        parameters = {
-            "chat_id" : "Enter_Chat_id",
-            "text" : ("Time: "+str(now)+"\nIp Addresss: "+ip+"\nName: "+name.upper()+"\nMENU: "+menu.upper()+"\nQuantity: "+order+"\nTotal: "+str(total).upper()+"")
-        } 
-        r = requests.get(base_url, data = parameters)
+        #parameters = {
+        #    "chat_id" : "Enter_Chat_id",
+        #   "text" : ("Time: "+str(now)+"\nIp Addresss: "+ip+"\nName: "+name.upper()+"\nMENU: "+menu.upper()+"\nQuantity: "+order+"\nTotal: "+str(total).upper()+"")
+        #} 
+        #r = requests.get(base_url, data = parameters)
         #print(r.text)
 
         o= input("Do you want to repeat this program\nPress Yes(y)\nPress NO(n)\n")
