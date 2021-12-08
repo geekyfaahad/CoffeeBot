@@ -1,7 +1,14 @@
 # CoffeeBot
-it's just a coffee bot
+it's just a coffee bot## Authors
+- [@GeekyFaahad](https://www.github.com/geekyfaahad)
+- [@AaqibAhmad]()## Installation
 
-# How to Install
+Install my-project with npm
 
-Install Packages
-pip3 install -r requirements.txt
+```bash
+Step 1: git clone https://github.com/geekyfaahad/CoffeeBot
+
+Step 2 cd pypacks
+
+Step 3 python bot.py
+```
