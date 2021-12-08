@@ -4,8 +4,6 @@ it's just a coffee bot## Authors
 - [@AaqibAhmad]()]
 ## Installation
 
-Install my-project with npm
-
 ```bash
 Step 1: git clone https://github.com/geekyfaahad/CoffeeBot
 
