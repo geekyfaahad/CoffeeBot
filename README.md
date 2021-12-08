@@ -7,7 +7,7 @@ it's just a coffee bot## Authors
 ```bash
 Step 1: git clone https://github.com/geekyfaahad/CoffeeBot
 
-Step 2 cd pypacks
+Step 2 cd CoffeeBot
 
 Step 3 python bot.py
 ```
