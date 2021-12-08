@@ -1,5 +1,6 @@
 # CoffeeBot
-it's just a coffee bot## Authors
+it's just a coffee bot
+## Authors
 - [@GeekyFaahad](https://www.github.com/geekyfaahad)
 - [@AaqibAhmad]()
 ## Installation
