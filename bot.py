@@ -93,13 +93,13 @@ while True:
         # sleep(1.5)
         # print("Please wait while we are making up your total\n\n")
         # sleep(2)
-        total=int(order) * 50
+        total=int(order) * price
         print("Your Total is Rs " +str(total)) 
         # payload = {"TIME" : str(now),"Name" : name,"MENU" : menu,"QUANTITY" : order,"TOTAL" : total,}
         # json_object = json.dumps(payload, indent = 6)
         # with open('data.json', 'a' ) as outfile:
         #     outfile.write(""+json_object+"\n")
-        # r = requests.post('Your_Api_Link_Key', json=payload)
+        # r = requests.post('Enter_Api_Key', json=payload)
 
         #WEBHOOK data
         #hook.send(f" {lines} \nTime: {now}\nIp Addresss: {ip}\nName: {name.upper()}\nMenu: {menu.upper()}\nOrder: {order}\nTotal: {total}\n{lines}")
